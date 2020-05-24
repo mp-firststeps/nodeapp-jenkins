@@ -1,14 +1,15 @@
 pipeline {
   agent any
   stages {
+
     stage('Env') {
       steps {
-        sh 'echo $TEST_VAR'
+        sh 'printenv'
       }
     }
 
   }
   environment {
-    TEST_VAR = $(git rev-parse HEAD)
+    TEST_VAR = 'myVar'
   }
 }
