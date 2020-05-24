@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('Build') {
       agent any
@@ -7,7 +7,7 @@ pipeline {
         TEST_VAR = 'test'
       }
       steps {
-        sh 'docker build -t $(TEST_VAR):latest -t $(TEST_VAR):$(TEST_VAR) .'
+        echo 'HI'
       }
     }
 
