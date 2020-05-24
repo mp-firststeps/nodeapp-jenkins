@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('Env') {
       steps {
-        sh 'echo $TEST_VAR'
+        sh echo $TEST_VAR
       }
     }
 
   }
   environment {
-    TEST_VAR = '$GIT_COMMIT'
+    TEST_VAR = $GIT_COMMIT
   }
 }
