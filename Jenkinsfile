@@ -19,6 +19,6 @@ pipeline {
 
   }
   environment {
-    TEST_VAR = 'myVar'
+    TEST_VAR = '$(git rev-parse HEAD)'
   }
 }
