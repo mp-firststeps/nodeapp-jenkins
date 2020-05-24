@@ -1,15 +1,14 @@
 pipeline {
   agent any
   stages {
-
     stage('Env') {
       steps {
-        sh 'printenv'
+        sh 'echo $TEST_VAR'
       }
     }
 
   }
   environment {
-    TEST_VAR = 'myVar'
+    TEST_VAR = '$GIT_COMMIT'
   }
 }
