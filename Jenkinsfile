@@ -11,6 +11,12 @@ pipeline {
       }
     }
 
+    stage('Env') {
+      steps {
+        sh 'echo $TEST_VAR'
+      }
+    }
+
   }
   environment {
     TEST_VAR = 'myVar'
